@@ -27,7 +27,7 @@ class Solution {
         return true;
     }
 
-    private ListNode reverseLL(ListNode head) {
+    public ListNode reverseLL(ListNode head) {
         ListNode prev = null, next = null;
         while (head != null) {
             next = head.next;
