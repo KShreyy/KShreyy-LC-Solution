@@ -2,11 +2,11 @@ class Solution {
     public int lengthOfLIS(int[] nums) {
         int n=nums.length;
         int[][] t=new int[n][n+1];
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n+1;j++){
-                t[i][j]=-1;
-            }
+        for (int[] row : t) {
+            Arrays.fill(row, -1);
         }
+
+       
         return helper(0,-1,nums,t);
         
     }
