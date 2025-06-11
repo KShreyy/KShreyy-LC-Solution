@@ -6,6 +6,7 @@ class Solution {
 
         int[] t = new int[n];
         t[0] = nums[0];
+    
         t[1] = Math.max(nums[0], nums[1]);
 
         for (int i = 2; i < n; i++) {
