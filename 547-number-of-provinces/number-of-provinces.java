@@ -1,6 +1,15 @@
 import java.util.*;
 
 class Solution {
+    private void dfs(int node,List<List<Integer>> adjList,boolean[] vis){
+        vis[node]=true;
+        for(int k:adjList.get(node)){
+            if(vis[k]!=true){
+                dfs(k,adjList,vis);
+            }
+        }
+           
+    }
     private void bfs(int node, List<List<Integer>> adjList, boolean[] vis) {
         vis[node] = true;
         Queue<Integer> q = new LinkedList<>();
@@ -42,7 +51,7 @@ class Solution {
         for (int i = 0; i < v; i++) {
             if (!vis[i]) {
                 count++;
-                bfs(i, adjList, vis);
+                dfs(i, adjList, vis);
             }
         }
 
